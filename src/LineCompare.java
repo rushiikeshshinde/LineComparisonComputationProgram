@@ -25,6 +25,19 @@ public class LineCompare {
 
     }
 
+    // Method for checking equality of two lines
+    static void isEqual(Integer length1, Integer length2){
+
+        // Using equals to compare two lines
+        if(length1.equals(length2)){
+            System.out.println("Two Lines are equal");
+        }
+        else{
+            System.out.println("Two Lines are not equal");
+        }
+
+    }
+
     // Main Method
     public static void main(String[] args) {
 
@@ -33,11 +46,19 @@ public class LineCompare {
 
         Scanner in = new Scanner(System.in);
 
-        int length = checkLineAndCalculateLength(in);
+        // Entering co-ordinates of two lines
+        System.out.println("Enter co-ordinates for Line 1: ");
+        int length1 = checkLineAndCalculateLength(in);
+        System.out.println("Enter co-ordinates for Line 2: ");
+        int length2 = checkLineAndCalculateLength(in);
         in.close();
 
-        // Printing length of line
-        System.out.println("Length of Line: "+length);
+        // Printing length of lines
+        System.out.println("Length of Line 1: "+length1);
+        System.out.println("Length of Line 2: "+length2);
+
+        // Calling method to check equality of two lines
+        isEqual(length1,length2);
 
     }
 
